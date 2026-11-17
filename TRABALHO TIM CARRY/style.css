@@ -1,0 +1,301 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    background: linear-gradient(
+        -2deg,
+        #120000 0%,
+        #4a0000 20%,
+        #4e0101 40%,
+        #4e0101 60%,
+        #350000 85%,
+        #120000 100%
+    );
+
+    background-size: 200% 200%;
+    animation: gradient 6s ease infinite;
+}
+
+
+
+@keyframes gradient {
+
+    0% {
+        background-position: 0% 50%;}
+
+    50% {
+        background-position: 100% 50%;}
+
+    100% {
+        background-position: 0% 50%;}
+
+}
+
+
+
+.titulo {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.titulo h1 {
+    font-size: 65px;
+    font-weight: 900;
+    color: #fbfaf2;
+    text-transform: uppercase;
+}
+
+.titulo h2 {
+    font-size: 25px;
+    color: #ffffff;
+    letter-spacing: 5px;
+    margin-top: 15px;
+}
+
+
+
+.apresentacao {
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+.apresentacao img {
+    width: 500px;
+    max-width: 90%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid white;
+}
+
+.apresentacao p {
+    font-size: 21px;
+    margin-top: 25px;
+}
+
+
+
+.btn-dona {
+    display: inline-block;
+    background-color: #8b0000;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-dona:hover {
+    background-color: #c00000;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+
+.depoimentos {
+    text-align: center;
+    color: white;
+    padding: 60px 20px;
+}
+
+.depoimentos h2 {
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.depoimentos > p {
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+
+.cards-depoimentos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card-depoimento {
+    background: #250000;
+    border: 1px solid #8b0000;
+    border-radius: 12px;
+
+    width: 280px;
+    padding: 20px;
+
+    text-align: left;
+    box-sizing: border-box;
+
+    transition: 0.3s;
+}
+
+.card-depoimento:hover {
+    transform: translateY(-5px);
+    border-color: white;
+}
+
+
+
+.estrelas {
+    color: #ffd700;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.card-depoimento p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.card-depoimento h3 {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #d6aaaa;
+}
+
+
+
+.servicos {
+    text-align: center;
+    color: white;
+    padding: 60px 20px;
+}
+
+.servicos h2 {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.servicos p {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.galeria img {
+    width: 300px;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+    border: 2px solid white;
+}
+
+
+.titulo {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.titulo h1 {
+    font-size: 65px;
+    font-weight: 900;
+    color: #fbfaf2;
+    text-transform: uppercase;
+}
+
+.cadastro {
+    display: flex;
+    justify-content: center;
+    padding: 70px 20px;
+    color: white;
+}
+
+.cadastro-container {
+    width: 450px;
+    max-width: 100%;
+    background: #250000;
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid #8b0000;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.cadastro-container h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 28px;
+}
+
+.cadastro-container > p {
+    text-align: center;
+    color: #d6aaaa;
+    margin-bottom: 30px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.campo input {
+    padding: 12px;
+    border-radius: 7px;
+    border: 1px solid #8b0000;
+    background: #160000;
+    color: white;
+    outline: none;
+}
+
+.campo input:focus {
+    border-color: white;
+}
+
+.campo small {
+    margin-top: 5px;
+    color: #ff7777;
+}
+
+.btn-cadastro {
+    width: 100%;
+    padding: 13px;
+    background: #8b0000;
+    color: white;
+    border: 1px solid white;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cadastro:hover {
+    background: #c00000;
+}
+
+#mensagem {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Assistência Funerária Dona Maria</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+
+    <div class="titulo">
+        <h1>ASSISTÊNCIA FUNERÁRIA DONA MARIA</h1>
+        <h2>SUA MORTE, NOSSA ALEGRIA</h2>
+    </div>
+
+
+  
+
+    <section class="apresentacao">
+
+        <img src="Gemini_Generated_Image_ez0dwoez0dwoez0d.jpg" alt="Coroa de flores">
+
+        <p>
+            Aqui não prometemos uma segunda chance,
+            mas garantimos um atendimento de primeira!
+        </p>
+
+        <a href="#servicos" class="btn-dona">
+            Conheça nossos serviços
+        </a>
+
+    </section>
+
+
+
+    <section class="depoimentos">
+
+        <h2>O QUE DIZEM NOSSOS CLIENTES</h2>
+
+        <p>A satisfação dos nossos clientes é eterna.</p>
+
+        <div class="cards-depoimentos">
+
+            <div class="card-depoimento">
+
+                <div class="estrelas">★★★★★</div>
+
+                <p>
+                    "Fui muito bem atendido. Não tenho do que reclamar,
+                    nem como voltar para reclamar."
+                </p>
+
+                <h3>— João S.</h3>
+
+            </div>
+
+
+            <div class="card-depoimento">
+
+                <div class="estrelas">★★★★★</div>
+
+                <p>
+                    "Atendimento impecável. Resolveram tudo
+                    antes mesmo de eu perceber."
+                </p>
+
+                <h3>— Carlos M.</h3>
+
+            </div>
+
+
+            <div class="card-depoimento">
+
+                <div class="estrelas">★★★★★</div>
+
+                <p>
+                    "Uma experiência única. Espero não precisar
+                    voltar tão cedo!"
+                </p>
+
+                <h3>— Roberto A.</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="servicos" class="servicos">
+
+        <h2>NOSSA ESTRUTURA</h2>
+
+        <p>Conheça a qualidade da Dona Maria.</p>
+
+        <div class="galeria">
+
+            <img src="estrutura.jpg" alt="Estrutura da empresa">
+
+            <img src="capela.jpg" alt="Capela">
+
+            <img src="flor.jpg" alt="Decoração com flores">
+
+        </div>
+
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <div class="titulo">
+        <h1> Se Cadastre </h1>
+        
+    </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
+
+<section class="cadastro">
+
+    <div class="cadastro-container">
+
+        <p>Preencha seus dados para continuar.</p>
+
+        <form id="formCadastro">
+
+            <div class="campo">
+                <label>Nome completo</label>
+                <input type="text" id="nome" placeholder="Digite seu nome completo">
+                <small></small>
+            </div>
+
+            <div class="campo">
+                <label>CPF</label>
+                <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14">
+                <small></small>
+            </div>
+
+            <div class="campo">
+                <label>Gmail</label>
+                <input type="email" id="email" placeholder="exemplo@gmail.com">
+                <small></small>
+            </div>
+
+            <div class="campo">
+                <label>Número de telefone</label>
+                <input type="text" id="telefone" placeholder="(00) 00000-0000" maxlength="15">
+                <small></small>
+            </div>
+
+            <button type="submit" class="btn-cadastro">
+                REALIZAR CADASTRO
+            </button>
+
+            <p id="mensagem"></p>
+
+        </form>
+
+    </div>
+
+</section>
+
+</section>
+
+<script>
+
+    $(document).ready(function () {
+
+    $("#formCadastro").submit(function (event) {
+
+        event.preventDefault();
+
+        let nome = $("#nome").val();
+        let cpf = $("#cpf").val().replace(/\D/g, "");
+        let email = $("#email").val();
+        let telefone = $("#telefone").val().replace(/\D/g, "");
+
+        let valido = true;
+
+        $(".campo small").text("");
+        $("#mensagem").text("");
+
+     
+        if (nome.trim().split(" ").length < 2) {
+            $("#nome").next("small").text("Digite seu nome completo.");
+            valido = false;
+        }
+
+     
+        if (cpf.length != 11) {
+            $("#cpf").next("small").text("O CPF precisa ter 11 números.");
+            valido = false;
+        }
+
+    
+        if (!email.endsWith("@gmail.com")) {
+            $("#email").next("small").text("Digite um Gmail válido.");
+            valido = false;
+        }
+
+       
+        if (telefone.length != 11) {
+            $("#telefone").next("small").text("Digite um telefone válido.");
+            valido = false;
+        }
+
+        
+        if (valido) {
+            $("#mensagem")
+                .css("color", "lightgreen")
+                .text("Cadastro realizado com sucesso!");
+
+            $("#formCadastro")[0].reset();
+        }
+
+    });
+
+});
+</script>
+
+
+</html>
